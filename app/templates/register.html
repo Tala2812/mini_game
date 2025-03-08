@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Регистрация</h1>
-    <form method="post" action="{{ url_for('register') }}">
+    <h1 class="text-center mb-4" style="color: #e91e63;">Регистрация</h1>
+    <form method="post" action="{{ url_for('register') }}" class="w-50 mx-auto p-4 border rounded shadow" style="background-color: #f8bbd0;">
         {{ form.hidden_tag() }}
-        <div>
-            {{ form.username.label }}
-            {{ form.username(size=32) }}
+        <div class="mb-3">
+            {{ form.username.label(class="form-label", style="color: #880e4f;") }}
+            {{ form.username(class="form-control", style="border-color: #e91e63;", size=32) }}
         </div>
-        <div>
-            {{ form.password.label }}
-            {{ form.password(size=32) }}
+        <div class="mb-3">
+            {{ form.password.label(class="form-label", style="color: #880e4f;") }}
+            {{ form.password(class="form-control", style="border-color: #e91e63;", size=32) }}
         </div>
-        <div>
-            {{ form.confirm_password.label }}
-            {{ form.confirm_password(size=32) }}
+        <div class="mb-3">
+            {{ form.confirm_password.label(class="form-label", style="color: #880e4f;") }}
+            {{ form.confirm_password(class="form-control", style="border-color: #e91e63;", size=32) }}
         </div>
-        <div>
-            {{ form.submit() }}
+        <div class="text-center">
+            {{ form.submit(class="btn btn-primary", style="background-color: #e91e63; border-color: #e91e63;") }}
         </div>
     </form>
 {% endblock %}
